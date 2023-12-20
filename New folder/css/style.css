@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+:root {
+  --bg: #f9f6f1;
+  --Hitam: #000000;
+  --Cokelat: #dbb069;
+  --warna1: #d4a5a5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 5%;
+  background-color: var(--Hitam);
+  border-bottom: 1px solid var(--Hitam);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+nav .navbar-navigation a {
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 1rem;
+}
+
+nav .navbar-navigation a:hover {
+  color: var(--Cokelat);
+}
+
+nav .navbar-navigation a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav .navbar-navigation a:hover::after {
+  transform: scaleX(0.5);
+}
+
+nav .navbar-ekstra a {
+  color: white;
+  margin: 0 0.4rem;
+}
+
+nav .navbar-ekstra a:hover {
+  color: var(--Cokelat);
+}
+
+#menu {
+  display: none;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  nav .navbar-navigation {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  nav .navbar-navigation.active {
+    right: 0;
+  }
+
+  nav .navbar-navigation a {
+    color: var(--Hitam);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  nav .navbar-navigation a::after {
+    transform-origin: 0 0;
+  }
+
+  nav .navbar-navigation a:hover ::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .link {
+    padding: 4rem;
+  }
+  .americano .lemontea {
+    max-width: 20rem;
+  }
+  .footer-kr {
+    width: calc(auto * 40%);
+  }
+  .footer-tgh {
+    width: calc(auto * 40%);
+  }
+  .footer-kn {
+    width: calc(auto * 40%);
+  }
+}
+
+/* Section */
+.americano {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/landing.jpeg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  position: relative;
+}
+
+.americano::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 10%,
+    rgba(255, 255, 255, 0) 57%
+  );
+}
+
+.americano .lemontea {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.americano .lemontea h1 {
+  margin-top: 8rem;
+  font-size: 2em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.americano .lemontea p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  line-height: 1.1;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.americano .lemontea .latte {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #000000;
+  border-radius: 3rem;
+  border: 4px solid white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none !important;
+  border: none;
+}
+body {
+  background-color: var(--bg);
+}
+#Menu h2,
+#About h2,
+#Contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--Hitam);
+  margin-bottom: 3rem;
+}
+#Menu,
+#About,
+#Contact {
+  padding: 4rem 7% 1.2rem;
+}
+/* pipit */
+.kedua {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.kedua div p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+article {
+  text-align: justify;
+}
+
+#About article ul {
+  padding-left: 1.5rem;
+}
+.foto {
+  border-radius: 20px;
+}
+
+/*  */
+/* Bagian Muhajir */
+#Menu .jdl-menu h2 {
+  margin-bottom: 70px;
+}
+.menu-list {
+}
+#Menu .row #More-imgs {
+  display: none;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+}
+
+.list {
+}
+/* .list:hover {
+  background-color: var(--Cokelat);
+  color: white;
+  transition: 0.3s;
+} */
+
+/* .product-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-content: space-between;
+} */
+/* #Menu .row .product {
+  flex-direction: column;
+  display: flex;
+  padding: 2rem;
+  border-radius: 10px;
+  border: #000000 1px solid;
+} */
+.menu-list :nth-child(1n + 4) {
+  display: none;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+.btn-area {
+  display: block;
+  background-color: var(--Hitam);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  width: 180px;
+  line-height: 50px;
+  margin: 50px auto 0;
+  border-radius: 50px;
+}
+.btn-area .btn2 {
+  display: none;
+}
+#btnBox {
+  display: none;
+}
+#btnBox:checked ~ .menu-list:nth-child(1n + 4) {
+  max-height: 1000px;
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+#btnBox:checked ~ .btn2 {
+  display: block;
+}
+#More-imgs {
+  display: none;
+  animation: slideIn ease-in 0.3s;
+}
+
+.lanjut {
+  margin-top: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  width: 600px;
+}
+.card img {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+}
+.lanjut h3 {
+  padding: 10px;
+  border: 8px solid var(--Hitam);
+  border-radius: 20px;
+  background-color: white;
+}
+.lanjut h3:hover {
+  cursor: pointer;
+  border: 8px solid white;
+  border-radius: 20px;
+  background-color: var(--Hitam);
+  transition: ease 0.3s;
+  color: white;
+}
+/* .row .product .content h3 {
+  font-size: 20px;
+  font-weight: 600px;
+  margin: 0.25rem 0 0.25rem 0;
+}
+.row .product {
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: white;
+}
+.row .product:hover {
+  background-color: var(--Cokelat);
+  color: white;
+  transition: ease-in 0.3s;
+}
+.row .product .content .Beli {
+  display: flex;
+  justify-content: space-between;
+}
+.row .product .content .Beli .beli {
+  color: white;
+  text-align: center;
+  width: 80px;
+  background-color: var(--Hitam);
+  border-radius: 15px;
+}
+.row-contact div {
+  margin: auto;
+} */
+.row-contact {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1.5rem;
+  height: 450px;
+  align-items: start;
+}
+.card-body {
+  line-height: 4rem;
+}
+.link {
+  color: white;
+  text-align: center;
+  padding: 0.25rem;
+  background-color: var(--Hitam);
+  border-radius: 15px;
+}
+form .btn {
+  color: white;
+  text-align: center;
+  background-color: var(--Hitam);
+  border-radius: 12px;
+}
+
+.map {
+  height: 400px;
+}
+footer {
+  background-color: var(--Hitam);
+}
+footer .footer img {
+  width: 100px;
+}
+footer {
+  color: white;
+  text-align: center;
+}
+footer .seller {
+  padding-left: 4.5rem;
+}
+footer .seller img {
+  margin: 1rem 2.5rem;
+}
+.video {
+  height: 300px;
+}
+.footer a,
+.footer img {
+  margin: 1rem;
+  color: white;
+}
+.footer-kr {
+  width: 37px;
+}
+.footer-tgh {
+  width: 50px;
+}
+.footer-kn {
+  width: 87px;
+}
+
+/* #Contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+} */
+/* #Contact .row form .input {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+#Contact .row form .input input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+footer {
+  background-color: var(--Hitam);
+}
+footer nav {
+  padding: 1rem 0;
+  display: flex;
+  width: 40%;
+  margin: 3rem auto 0 28.5%;
+  align-items: center;
+  justify-content: space-around;
+}
+footer nav img {
+  width: 100px;
+}
+footer nav a {
+  color: white;
+  font-weight: bold;
+}
+footer .seller {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+}
+footer .seller img {
+  width: 5rem;
+}
+footer p {
+  margin: 0.5rem 0;
+  color: white;
+  text-align: center;
+} */

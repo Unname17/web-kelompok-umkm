@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+:root {
+  --bg: #f9f6f1;
+  --Hitam: #000000;
+  --Cokelat: #dbb069;
+}
+
+body {
+  background-color: aquamarine;
+}
